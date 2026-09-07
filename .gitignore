@@ -1,0 +1,13 @@
+# Dependencies
+/node_modules
+
+# Next.js build output
+/.next
+*.tsbuildinfo
+next-env.d.ts
+
+# Rohmaterial (Kopien liegen unter public/media)
+/dWatcher Screenshots
+
+# System
+.DS_Store

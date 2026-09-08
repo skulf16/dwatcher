@@ -15,7 +15,7 @@ export function Reports() {
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <div>
             <SectionHeading
-              index="04"
+              index="06"
               kicker="Monitoring"
               title="Ständiger Überblick"
               lead="Regelmäßig erhalten Sie einen Report zur Gesundheit Ihrer IT-Systeme, so dass Sie ruhig schlafen können und notwendige Investitionen schon lange vor ihrer Notwendigkeit kommen sehen."

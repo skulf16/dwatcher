@@ -12,7 +12,7 @@ export function Tech() {
     <section id="technik" className="scroll-mt-24 border-t border-line bg-base py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
-          index="05"
+          index="07"
           kicker="Technik"
           title="Technische Details"
         />

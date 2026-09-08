@@ -10,7 +10,7 @@ export function Pricing() {
     <section id="preise" className="scroll-mt-24 border-t border-line py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
-          index="06"
+          index="08"
           kicker="Preise"
           title="Preisgestaltung"
         />

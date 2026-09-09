@@ -54,7 +54,7 @@ export function Systemhaeuser() {
             </video>
           </div>
           <figcaption className="mt-3 text-center font-mono text-[11px] uppercase tracking-[0.16em] text-faint">
-            <span className="text-accent">▶</span> 0:41 Min.
+            <span className="text-accent">▶</span> 1:03 Min.
           </figcaption>
         </figure>
 

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ExpandPoint } from "@/components/ui/ExpandPoint";
 
 const REPORT_PDFS = [
   ["Mai 2026", "/media/reports/reporting-2026-05.pdf"],
@@ -20,14 +21,16 @@ export function Reports() {
               title="Ständiger Überblick"
               lead="Regelmäßig erhalten Sie einen Report zur Gesundheit Ihrer IT-Systeme, so dass Sie ruhig schlafen können und notwendige Investitionen schon lange vor ihrer Notwendigkeit kommen sehen."
             />
-            <p className="mt-6 max-w-xl leading-relaxed text-dim">
-              Die Zusammenstellung der regelmäßig geprüften Parameter basiert auf
-              der jahrelangen Erfahrung von Datadiorama in der Systembetreuung. So
-              werden Sie nicht mit unverständlichen Daten überschüttet, sondern
-              erhalten einen einfachen, leicht verständlichen Überblick, der Ihnen
-              IT-Entscheidungen erleichtert und Sie zum Experten für Ihre eigenen
-              Systeme macht.
-            </p>
+            <div className="mt-8">
+              <ExpandPoint code="EXP_KNOW" title="Erfahrung statt Datenflut">
+                Die Zusammenstellung der regelmäßig geprüften Parameter basiert
+                auf der jahrelangen Erfahrung von Datadiorama in der
+                Systembetreuung. So werden Sie nicht mit unverständlichen Daten
+                überschüttet, sondern erhalten einen einfachen, leicht
+                verständlichen Überblick, der Ihnen IT-Entscheidungen erleichtert
+                und Sie zum Experten für Ihre eigenen Systeme macht.
+              </ExpandPoint>
+            </div>
 
             {/* Beispiel-Berichte als PDF */}
             <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.24em] text-faint">
@@ -95,13 +98,15 @@ export function Reports() {
               <span aria-hidden className="inline-block h-2 w-2 rounded-full bg-accent" />
               Email-Alerts_
             </h3>
-            <p className="mt-4 max-w-xl leading-relaxed text-dim">
-              Diese Benachrichtigungen sendet dwatcher alle zwei Wochen oder bei
-              Dringlichkeit an Sie: Alle zwei Wochen bekommen Sie einen
-              Gesundheitsreport zu Ihren Systemen – ein kurzer, verständlicher
-              Text fasst das Gesamtergebnis zusammen, darunter finden Sie die
-              einzelnen Systeme und ihre Gesundheit als einfache Ampel.
-            </p>
+            <div className="mt-5">
+              <ExpandPoint code="MAIL_14D" title="Gesundheitsreport per E-Mail">
+                Diese Benachrichtigungen sendet dwatcher alle zwei Wochen oder
+                bei Dringlichkeit an Sie: Alle zwei Wochen bekommen Sie einen
+                Gesundheitsreport zu Ihren Systemen – ein kurzer, verständlicher
+                Text fasst das Gesamtergebnis zusammen, darunter finden Sie die
+                einzelnen Systeme und ihre Gesundheit als einfache Ampel.
+              </ExpandPoint>
+            </div>
             <p className="mt-4 max-w-xl border-l-2 border-crit/60 bg-crit/5 px-4 py-3 leading-relaxed text-fg">
               Wenn ein Rechner oder Bauelement in den roten Bereich rutscht,
               werden Sie sofort informiert.
@@ -125,6 +130,36 @@ export function Reports() {
             Verfügbarkeit je System – jederzeit nachvollziehbar
           </figcaption>
         </figure>
+
+        {/* Compliance: Sorgfaltspflicht & Nachweis */}
+        <div className="corners reveal mt-16 border border-accent/40 bg-panel p-8 shadow-panel sm:p-10">
+          <p className="flex items-center gap-3 font-mono text-[12px] uppercase tracking-[0.28em] text-accent">
+            <span aria-hidden className="inline-block h-2 w-2 rounded-full bg-accent" />
+            Compliance_
+          </p>
+          <h3 className="mt-4 font-display text-3xl font-bold uppercase tracking-wide sm:text-4xl">
+            Nachweisbar sorgfältig.
+          </h3>
+          <p className="mt-4 max-w-3xl leading-relaxed text-dim">
+            Mit der permanenten Überwachung Ihrer Systeme genügen Sie Ihrer
+            Sorgfaltspflicht – und haben einen regelmäßigen Nachweis über das
+            ordnungsgemäße Funktionieren und die durchgeführten Updates Ihrer
+            gesamten IT. So gewinnen Ihre Systeme an Sicherheit. Und kommt es
+            dennoch zu einem IT-Vorfall, können Sie belegen, dass Sie Ihrer
+            Sorgfaltspflicht nachgekommen sind – gegenüber:
+          </p>
+          <ul className="mt-6 flex flex-wrap gap-3">
+            {["Versicherungen", "Behörden", "Aufsichtsräten"].map((who) => (
+              <li
+                key={who}
+                className="inline-flex items-center gap-2 border border-line-strong bg-base px-3.5 py-2 font-mono text-[12px] uppercase tracking-[0.1em] text-fg"
+              >
+                <span aria-hidden className="text-ok">✓</span>
+                {who}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

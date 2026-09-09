@@ -1,4 +1,5 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ExpandPoint } from "@/components/ui/ExpandPoint";
 
 const POINTS = [
   {
@@ -35,18 +36,9 @@ export function Unternehmen() {
 
           <div className="mt-9 space-y-6">
             {POINTS.map((p) => (
-              <article key={p.code} className="group relative border-l-2 border-line pl-5 transition-colors hover:border-accent">
-                <span
-                  aria-hidden
-                  className="font-mono text-[11px] tracking-[0.18em] text-faint transition-colors group-hover:text-accent"
-                >
-                  [{p.code}]
-                </span>
-                <h3 className="mt-1 font-display text-xl font-semibold uppercase tracking-wide text-fg">
-                  {p.title}
-                </h3>
-                <p className="mt-2 leading-relaxed text-dim">{p.text}</p>
-              </article>
+              <ExpandPoint key={p.code} code={p.code} title={p.title}>
+                {p.text}
+              </ExpandPoint>
             ))}
           </div>
 

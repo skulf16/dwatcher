@@ -42,7 +42,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col gap-2 border-t border-line pt-6 font-mono text-[11px] tracking-[0.14em] text-faint sm:flex-row sm:items-center sm:justify-between">
-          <span>SYS.DATE: {new Date().getFullYear()} // {SITE.fullName}</span>
+          <span>{`SYS.DATE: ${new Date().getFullYear()} // ${SITE.fullName}`}</span>
           <span className="inline-flex items-center gap-2 text-accent">
             <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse-led" aria-hidden />
             Status: Aktiv

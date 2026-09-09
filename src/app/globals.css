@@ -20,11 +20,11 @@
   --color-raise: #111a52;
 
   /* Linien & Text */
-  --color-line: rgba(125, 169, 255, 0.16);
-  --color-line-strong: rgba(125, 169, 255, 0.32);
-  --color-fg: #eef4ff;
-  --color-dim: #8a90a6;
-  --color-faint: #5a6178;
+  --color-line: rgba(125, 169, 255, 0.22);
+  --color-line-strong: rgba(125, 169, 255, 0.4);
+  --color-fg: #f2f6ff;
+  --color-dim: #b6bfd6;
+  --color-faint: #8b93ad;
 
   /* Marken-Akzente (Datadiorama) */
   --color-accent: #2ea3f2;
